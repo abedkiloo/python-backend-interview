@@ -1,16 +1,28 @@
 from django.db import models
+from django.conf import settings
 
-# Create your models here.
 class TripDetails(models.Model):
+
+    PICK_UP_POINT = 'pick_up_point'
+    DROP_OF_POINT = 'drop_off_point'
+
+    PICK_UP_CONF = (
+        (PICK_UP_POINT, 'pick_up_point'),
+        (DROP_OF_POINT, 'drop_off_point'),
+    )
+
     driver_id = models.IntegerField(max_length=30)
     vehicle_id = models.IntegerField(max_length=30)
     customer_id = models.CharField(max_length=30)
     address = models.CharField(max_length=30)
     cargo_tonnage = models.DecimalField(max_digits = 10, decimal_places = 2)
-    # cargo_type = models.DecimalField(max_)
+    cargo_type = models.CharField(max_length=255, choices=PICK_UP_CONF, default=PICK_UP_POINT)
+    done_by_user_id = models.ForeignKey( settings.AUTH_USER_MODEL,on_delete=models.CASCADE,)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 
 
 
-    last_name = models.CharField(max_length=30)
+
