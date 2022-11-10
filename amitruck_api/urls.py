@@ -9,14 +9,3 @@ urlpatterns = [
   re_path('api/(?P<version>(v1|v2))/', include('trips.urls')),
 
 ]
-
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('api-token-auth/', obtain_auth_token, name='api_token_auth'), 
-#     re_path('api/(?P<version>(v1|v2))/', include('trips.urls')),
-
-
-
-
-# ]

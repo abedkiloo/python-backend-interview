@@ -19,6 +19,9 @@ This is a description of running the app
 
 - Create a super user 
             i.e `python3 manage.py createsuperuser`  : provide your ** email and password **
+
+- Run Migrations
+            i.e `python3 manage.py makemigrations` followed by `python3 manage.py migrate` : provide your ** email and password **
 - Server your project 
         i.e ` python3 manage.py runserver`  :- produces you ** url ** to use for apis
 
