@@ -24,7 +24,9 @@ def trips(request, version):
 
 
     if request.method == "POST":
-        serializer = TripSerializer(data=request.data)
+        request_data = dict(request.data)
+        request_data["done_by_user"] = request.user.id
+        serializer = TripSerializer(data=request_data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)

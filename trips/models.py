@@ -11,13 +11,13 @@ class TripDetails(models.Model):
         (DROP_OF_POINT, 'drop_off_point'),
     )
 
-    driver_id = models.IntegerField(max_length=30)
-    vehicle_id = models.IntegerField(max_length=30)
+    driver_id = models.IntegerField()
+    vehicle_id = models.IntegerField()
     customer_id = models.CharField(max_length=30)
     address = models.CharField(max_length=30)
     cargo_tonnage = models.DecimalField(max_digits = 10, decimal_places = 2)
     cargo_type = models.CharField(max_length=255, choices=PICK_UP_CONF, default=PICK_UP_POINT)
-    done_by_user_id = models.ForeignKey( settings.AUTH_USER_MODEL,on_delete=models.CASCADE,)
+    done_by_user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
