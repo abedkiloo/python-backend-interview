@@ -22,14 +22,15 @@ This is a description of running the app
 - Server your project i.e python3 manage.py runserver produce you ** url ** to use for apis
 
 - Generate your token for user by  url (from above )/api-token-auth gives
-                        ``
+                        `
                         {
                             "token": "865ee573bf8c964ee44221d5118f33ad71a528a9"
                         }
-                        ``
+                        `
 
 - Create a Trip with  {url}/api/v1/trips/ provide required fields
-        ## Header should have a Authorization : TOKEN <{token}>
+        # Header should have a 
+        `Authorization : TOKEN <{token}>`
 
         `
         {
