@@ -3,13 +3,13 @@
 This is a description of running the app
 
 # How to use
- - Clione repo Locally
+ - Clone repo Locally
 
 
  -  Before proceeding, you should have cloned all service repositories in one folder
 
    Setup you local env by creating a env and activating it
-            i.e python3 -m venv env then source env/bin/activate
+            i.e `python3 -m venv env` then source env/bin/activate
 
 # Install Requirments
 
