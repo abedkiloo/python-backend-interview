@@ -13,13 +13,14 @@ This is a description of running the app
 
 # Install Requirments
 
-- Run pip3 install -r requirements.txt
+- Run `pip3 install -r requirements.txt`
 
 # Run App
 
-- Create a super user i.e python3 manage.py createsuperuser 
-                    - provide your ** email and password **
-- Server your project i.e python3 manage.py runserver produce you ** url ** to use for apis
+- Create a super user 
+            i.e `python3 manage.py createsuperuser`  : provide your ** email and password **
+- Server your project 
+        i.e ` python3 manage.py runserver`  :- produces you ** url ** to use for apis
 
 - Generate your token for user by  url (from above )/api-token-auth gives
 
